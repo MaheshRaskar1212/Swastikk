@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const services = ["Web Development", "Mobile Apps", "Graphics Design", "Digital Marketing", "Social Media", "Game Development"];
@@ -29,16 +29,61 @@ const Footer = () => {
 
           <div>
             <h4 className="font-heading font-semibold text-background mb-4">Contact</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li className="flex items-center gap-3 text-sm text-background/60">
-                <Mail className="w-4 h-4 shrink-0" /> swastiktechnologyandsolutions@gmail.com
+                <Mail className="w-4 h-4 shrink-0" />
+                <a
+                  href="mailto:swastiktechnologyandsolutions@gmail.com"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                  aria-label="Send email to Swastik Tech Solutions"
+                >
+                  swastiktechnologyandsolutions@gmail.com
+                </a>
               </li>
-              <li className="flex items-center gap-3 text-sm text-background/60">
-                <Phone className="w-4 h-4 shrink-0" /> +91 8010705057
-                <Phone className="w-4 h-4 shrink-0" /> +91 9503354113
+              <li className="flex flex-col gap-2 text-sm text-background/60">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a
+                    href="tel:+918010705057"
+                    className="text-sm text-background/60 hover:text-background transition-colors"
+                    aria-label="Call Swastik Tech Solutions on +91 8010705057"
+                  >
+                    +91 8010705057
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a
+                    href="tel:+919503354113"
+                    className="text-sm text-background/60 hover:text-background transition-colors"
+                    aria-label="Call Swastik Tech Solutions on +91 9503354113"
+                  >
+                    +91 9503354113
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3 text-sm text-background/60">
                 <MapPin className="w-4 h-4 shrink-0" /> India
+              </li>
+              <li className="flex items-center gap-3 pt-2">
+                <a
+                  href="https://www.linkedin.com/company/swastik-tech-solutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open LinkedIn profile"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 bg-background/5 text-background/70 transition duration-200 hover:-translate-y-0.5 hover:bg-primary hover:text-white"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/swastiktechnosolutions?igsh=MTZlem50OXJwcG12ag=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Instagram profile"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-background/20 bg-background/5 text-background/70 transition duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-br hover:from-pink-500 hover:via-purple-500 hover:to-orange-400 hover:text-white"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
               </li>
             </ul>
           </div>
@@ -48,31 +93,6 @@ const Footer = () => {
           <p className="text-xs text-background/40">
             © {new Date().getFullYear()} SWASTIK Tech Solutions. All rights reserved.
           </p>
-         <div className="flex gap-4">
-          {[
-            { name: "LinkedIn", link: "https://www.linkedin.com/company/swastik-tech-solutions" },
-            { name: "Instagram", link: "https://www.instagram.com/swastiktechnosolutions?igsh=MTZlem50OXJwcG12ag==" }
-
-          ].map((item) => (
-            <a
-              key={item.name}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-               className="
-        text-sm 
-        sm:text-base 
-        md:text-lg 
-        lg:text-xl 
-        text-background/40 
-        hover:text-background 
-        transition-colors
-      "
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
         </div>
       </div>
     </footer>
